@@ -7,6 +7,8 @@
 oc adm must-gather --image=docker.io/navidsh/kabanero-must-gather:latest
 ```
 
+**Note:** `must-gather` flag is added in `oc v4.1+`. If you are using an older version of `oc`, you can get a new version of the CLI from [here](https://mirror.openshift.com/pub/openshift-v4/clients/oc/4.2/).
+
 The command above will create a local directory with a dump of the Kabanero collection state. Note that this command will only get data related to the Kabanero Collection of the OpenShift cluster. _The must-gather scripts are copy of scripts provided in [Kabanero Foundation](https://github.com/kabanero-io/kabanero-foundation)._
 
 In order to get data about other parts of the cluster (not specific to Kabanero) you should run just `oc adm must-gather` (without passing a custom image). Run `oc adm must-gather -h` to see more options.
